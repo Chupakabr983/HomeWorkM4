@@ -1,0 +1,51 @@
+* {
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: fit-content;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  perspective: 600px;
+}
+
+.text {
+  position: relative;
+  bottom: -135px;
+  z-index: -1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.door {
+  float: left;
+  width: 350px;
+  height: 250px;
+  background-color: #872d62;
+  border: 5px solid #651142;
+  transition: 2s;
+}
+
+.left_door {
+  transform-origin: left;
+}
+
+.right_door {
+  transform-origin: right;
+}
+
+.container:hover .left_door {
+  transform: rotateY(40deg);
+}
+
+.container:hover .right_door {
+  transform: rotateY(-40deg);
+}
